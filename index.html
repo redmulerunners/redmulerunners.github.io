@@ -75,6 +75,42 @@
   </a>
 </nav>
 
+<nav class="w3-hide-medium w3-hide-large">
+	<div class="w3-dropdown-click">
+		<button class="w3-button w3-display-bottom" onclick="navFunction()">
+			<i class="fa fa-bars w3-xxlarge"></i>
+		</button>
+		<div id="smNav" class="w3-dropdown-content w3-bar-block w3-card-4">
+			<a href="#" onclick="highlightsFunction()" class="w3-bar-item w3-button w3-padding-large w3-red">
+				<i class="fa fa-home w3-small"></i>
+				<p>HOME</p>
+			</a>
+			<a href="#club" onclick="clubinfoFunction()" class="w3-bar-item w3-button w3-padding-large w3-hover-white">
+				<i class="fa fa-group w3-small"></i>
+				<p>Club Information</p>
+			</a>
+			<a href="#races" onclick="raceinfoFunction()" class="w3-bar-item w3-button w3-padding-large w3-hover-white">
+				<i class="fa fa-flag-checkered w3-small"></i>
+				<p>Race Information</p>
+			</a>
+			<a href="#runs" class="w3-bar-item w3-button w3-padding-large w3-hover-white">
+				<i class="material-icons w3-small">directions_run</i>
+				<p>Club Runs</p>
+			</a>
+			<a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-white">
+				<i class="fa fa-envelope w3-small"></i>
+				<p>CONTACT</p>
+			</a>
+			<a href="https://www.facebook.com/groups/1568746760040815/" class="w3-bar-item w3-button w3-padding-large w3-hover-red" target="_blank">
+			<i class="fa fa-facebook-official" style="font-size:60px; color:blue;"></i>
+			</a>
+			<a href="https://www.rrca.org/" class="w3-bar-item w3-button w3-padding-large w3-hover-red" target="_blank">
+			<img src="rrca_website_icon.jpg" alt="RRCA Member" style="max-height: 60px;">
+			</a>
+		</div>
+	</div>
+</nav>
+
 <div id="main" class="w3-container w3-margin-top w3-white">
   <div class="w3-container w3-white">
   <!--<div class="w3-quarter w3-container w3-gray w3-card" style="min-height:400px;">
@@ -388,12 +424,14 @@ for (i = 0; i < coll.length; i++) {
 
 function highlightsFunction() {
     var x = document.getElementById("highlights");
-	var y = document.getElementById("clubinfo");
-	var z = document.getElementById("raceinfo");
+		var y = document.getElementById("clubinfo");
+		var z = document.getElementById("raceinfo");
+		var u = document.getElementById("smNav");
     if (x.className.indexOf("w3-show") == -1) {
         x.className += " w3-show";
 		y.className = y.className.replace(" w3-show", " w3-hide");
 		z.className = z.className.replace(" w3-show", " w3-hide");
+		u.className = u.className.replace(" w3-show", " w3-hide");
     } /*else {
         x.className = x.className.replace(" w3-show", "");
     }*/
@@ -401,12 +439,14 @@ function highlightsFunction() {
 
 function clubinfoFunction() {
     var x = document.getElementById("highlights");
-	var y = document.getElementById("clubinfo");
-	var z = document.getElementById("raceinfo");
+		var y = document.getElementById("clubinfo");
+		var z = document.getElementById("raceinfo");
+		var u = document.getElementById("smNav");
     if (y.className.indexOf("w3-show") == -1) {
         y.className += " w3-show";
 		x.className = x.className.replace(" w3-show", " w3-hide");
 		z.className = z.className.replace(" w3-show", " w3-hide");
+		u.className = u.className.replace(" w3-show", " w3-hide");
     } /*else {
         x.className = x.className.replace(" w3-show", "");
     }*/
@@ -414,12 +454,14 @@ function clubinfoFunction() {
 
 function raceinfoFunction() {
     var x = document.getElementById("highlights");
-	var y = document.getElementById("clubinfo");
-	var z = document.getElementById("raceinfo");
+		var y = document.getElementById("clubinfo");
+		var z = document.getElementById("raceinfo");
+		var u = document.getElementById("smNav");
     if (z.className.indexOf("w3-show") == -1) {
         z.className += " w3-show";
 		x.className = x.className.replace(" w3-show", " w3-hide");
 		y.className = y.className.replace(" w3-show", " w3-hide");
+		u.className = u.className.replace(" w3-show", " w3-hide");
     } /*else {
         x.className = x.className.replace(" w3-show", "");
     }*/
@@ -434,6 +476,15 @@ function accFunction(id) {
         x.className = x.className.replace(" w3-show", "");
 		x.previousElementSibling.className = 
 		x.previousElementSibling.className.replace("w3-red w3-xlarge", "");
+    }
+}
+
+function navFunction() {
+    var x = document.getElementById("smNav");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
     }
 }
 </script>
