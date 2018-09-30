@@ -31,14 +31,14 @@
 </head>
 <body style="background-color:red;">
 
-<div id="banner" class="w3-row w3-center w3-display-container w3-margin-bottom w3-hide-small" style="background-color:red;">
+<div id="banner" class="w3-row w3-center w3-display-container w3-margin-bottom w3-hide-small" style="padding-top: 0.2em; padding-bottom: 0.2em; background-color:red;">
   <div>
     <img  class="w3-mobile"src="RedMuleBannerWhite.svg">
   </div>
 </div>
 
 <!-- Icon Bar (Sidebar - hidden on small screens) -->
-<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center" style="color:white;">
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center" style="color:white; margin-top: calc(3em - 7px);">
   <a href="#" onclick="highlightsFunction()" class="w3-bar-item w3-button w3-padding-large w3-red">
     <i class="fa fa-home w3-xxlarge"></i>
     <p>HOME</p>
@@ -323,11 +323,11 @@ function accFunction(id) {
     var x = document.getElementById(id);
     if (x.className.indexOf("w3-show") == -1) {
         x.className += " w3-show";
-		x.previousElementSibling.className += " w3-red w3-xlarge";
+		x.previousElementSibling.className += " w3-red";
     } else { 
         x.className = x.className.replace(" w3-show", "");
 		x.previousElementSibling.className = 
-		x.previousElementSibling.className.replace("w3-red w3-xlarge", "");
+		x.previousElementSibling.className.replace(" w3-red", "");
     }
 }
 
